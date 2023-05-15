@@ -25,13 +25,13 @@ from absl import flags
 from tensorflow_datasets.core.logging import base_logger
 from tensorflow_datasets.core.logging import call_metadata
 from tensorflow_datasets.core.logging import logging_logger
-
 import wrapt
 
 
 _T = TypeVar("_T")
 _Decorator = Callable[[_T], _T]
 _LoggerMethod = Callable[..., None]
+
 
 _registered_loggers: Optional[List[base_logger.Logger]] = None
 
